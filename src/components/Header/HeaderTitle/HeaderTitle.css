@@ -1,0 +1,12 @@
+#headertitle-span {
+    border-bottom: 2px solid #E6C32F;
+    display: inline-block; 
+    color: #455A64;
+    font-weight: 800;
+}
+p {
+    color: #0A1E33;
+    font-weight: 300;
+    font-size: 40px;
+}
+
