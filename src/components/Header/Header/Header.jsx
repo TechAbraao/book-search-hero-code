@@ -12,10 +12,10 @@ export default function Header() {
          <div className="header-text flex flex-col w-2/4 gap-y-13 justify-evenly">
             <HeaderTitle />
             <div className="flex flex-col gap-7 justify-center items-start">
-               <p className="font-bold text-BScustomColor4 text-8xl">
+               <p className="md:text-8xl text-4xl font-bold text-BScustomColor4">
                   <span className="bg-BScustomColor2 px-1">Descubra</span> sua
                </p>
-               <p className="font-bold text-BScustomColor4 text-8xl">
+               <p className="md:text-8xl text-4xl font-bold text-BScustomColor4">
                   próxima leitura!
                </p>
                <p className="text-BScustomColor5 text-2xl">

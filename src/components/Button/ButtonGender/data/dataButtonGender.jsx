@@ -2,6 +2,7 @@ import React from "react";
 import ButtonGender from "../ButtonGender";
 import { useState, useCallback } from "react";
 
+//
 export default function dataButtonGender() {
    const genderBooks = [
       "Comédia",
@@ -13,15 +14,20 @@ export default function dataButtonGender() {
       "Autoajuda",
    ];
    const [selectedGender, setSelectedGender] = useState([]);
-   const handleSelect = useCallback((title) => {
-      console.log("Hello, World")
-      if(selectedGender.includes(title)) {
-         const removeGender = selectedGender.filter(item => item !== title)
-         setSelectedGender(removeGender)
-      } else {
-         setSelectedGender([...ButtonGender, title])
-      }
-   }, [selectedGender],);
+   const handleSelect = useCallback(
+      (title) => {
+         console.log("Hello, World");
+         if (selectedGender.includes(title)) {
+            const removeGender = selectedGender.filter(
+               (item) => item !== title
+            );
+            setSelectedGender(removeGender);
+         } else {
+            setSelectedGender([...ButtonGender, title]);
+         }
+      },
+      [selectedGender]
+   );
 
    return (
       <>

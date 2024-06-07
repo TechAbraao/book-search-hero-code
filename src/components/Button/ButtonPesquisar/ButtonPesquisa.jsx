@@ -1,11 +1,12 @@
 import React from "react";
-import "./ButtonPesquisar.css";
 import { ArrowRight } from "lucide-react";
-
+import { motion } from "framer-motion";
+//
 export default function ButtonPesquisa(props) {
    return (
       <div className="h-20 flex">
-         <button
+         <motion.button
+            whileHover={{ scale: 1.05, opacity: 0.95 }}
             className="bg-BScustomColor2
              hover:bg-BScustomColor4
              text-white 
@@ -19,14 +20,11 @@ export default function ButtonPesquisa(props) {
             items-center 
             flex-row-reverse
             text-2xl
-            hover:delay-150
-            ease-in duration-300
             "
          >
             <ArrowRight size={35} strokeWidth={3} />
             {props.title}
-         </button>
-         
+         </motion.button>
       </div>
    );
 }
