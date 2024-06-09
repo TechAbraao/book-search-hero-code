@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 //
 import Header from "../Header/Header/Header";
 import EscolherGenero from "../SelecaoInput/EscolherGenero/EscolherGenero";
@@ -10,7 +11,7 @@ export default function Home() {
       <div>
          <Header />
          <EscolherGenero title="Qual gênero deseja?" />
-         <Input />
+         <Input placeholder="Buscar no Book Search"/>
          <Cards />
       </div>
    );

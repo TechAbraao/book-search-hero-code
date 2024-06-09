@@ -2,8 +2,11 @@ import React from "react";
 import { Container } from "../../Container/Container";
 import HeaderTitle from "../Header/HeaderTitle/HeaderTitle";
 import Cards from "../Cards/Cards";
+import { useParams } from "react-router-dom";
 
 export default function BookDetails() {
+   const {id} = useParams();
+
    return (
       <Container>
          <HeaderTitle />
@@ -36,12 +39,12 @@ export default function BookDetails() {
          </div>
          <h1 className="flex justify-center w-full text-5xl font-semibold text-BScustomColor2">Recomendações com base nesse livro</h1>
          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 pt-16">
-         <Cards />
-         <Cards />
-         <Cards />
-         <Cards />
-         <Cards />
-         <Cards />
+         <Cards id="123"/>
+         <Cards id="123" />
+         <Cards id="123" />
+         <Cards id="123" />
+         <Cards id="123" />
+         <Cards id="123" />
          </div>
        
       </Container>

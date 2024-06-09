@@ -16,7 +16,6 @@ export default function dataButtonGender() {
    const [selectedGender, setSelectedGender] = useState([]);
    const handleSelect = useCallback(
       (title) => {
-         console.log("Hello, World");
          if (selectedGender.includes(title)) {
             const removeGender = selectedGender.filter(
                (item) => item !== title
@@ -32,7 +31,7 @@ export default function dataButtonGender() {
    return (
       <>
          <div className="gap-5 grid grid-cols-7">
-            {genderBooks.map((book) => (
+            {genderBooks.map((book, key) => (
                <ButtonGender
                   titleGender={book}
                   onClick={() => handleSelect(book)}

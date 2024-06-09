@@ -1,26 +1,31 @@
-import React from "react";
-import Tag from "../Tag/Tag"
+import React, { useCallback } from "react";
+import Tag from "../Tag/Tag";
+import { useNavigate } from "react-router-dom";
 
-export default function Cards() {
+export default function Cards({ id }) {
+   const navigate = useNavigate();
+   const handleSelectBook = useCallback(() => {
+      navigate(`/${id}`);
+   }, [id, navigate]);
+
    return (
       <>
-         <div className="p-4 grid grid-cols-3 gap-3 shadow-lg border border-gray-100 max-w-lg w-full">
+         <div className="p-4 grid grid-cols-2 gap-4shadow-lg border border-gray-100 max-w-lg w-full">
             <img
                src="https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/allen.jpg"
                alt=""
                className="col-span-1 w-full h-full rounded-lg"
             />
-            <div className="col-span-2">
-               <p className="font-bold text-2xl text-BScustomColor2">
+            <div className="w-full flex flex-col gap-5">
+               <p className="font-bold text-BScustomColor2 text-sm">
                   Código Limpo
                </p>
                <p className="font-light text-lg text-BScustomColor5">Autor</p>
-               <Tag title="Computer"/>
-               <p className="text-xs">
+               <Tag title="Computer" />
+               <p className="w-full text-sm">
                   <strong>Sinopse:</strong> orem ipsum dolor sit amet,
                   consectetur adipiscing elit. Cras ullamcorper erat faucibus
-                  justo luctus gravida. In hac habitasse platea dictumst.
-                  Curabitur at massa vel nulla pulvinar dignissim
+                  justo luctus gravida.
                </p>
                <button
                   className="bg-BScustomColor2
@@ -31,13 +36,14 @@ export default function Cards() {
             flex 
             justify-center
             gap-8
-            text-size
             items-center 
             flex-row-reverse
-            text-2xl
+            text-xl
             hover:delay-150
             ease-in duration-300
+            p-2
             "
+                  onClick={handleSelectBook}
                >
                   Ver mais
                </button>
